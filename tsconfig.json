@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+          "@/*": ["./*"]
+      },
+      "outDir": "./dist/",
+      "rootDir": "./",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "module": "commonjs",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "lib": ["esnext.intl", "es2017.intl", "es2018.intl"],
+      "experimentalDecorators": true
+  },
+  "include": ["src"]
+}
