@@ -13,9 +13,7 @@ class SetupAxios {
 
         this.api.interceptors.response.use(
             (response) => {
-                return new Promise((resolve) => {
-                    resolve(response);
-                });
+                return Promise.resolve(response);
             },
             (error) => {
                 if ([401, 403].includes(error.response.status)) {
@@ -23,9 +21,7 @@ class SetupAxios {
                     return;
                 }
                 if (!error.response) {
-                    return new Promise((resolve, reject) => {
-                        reject(error);
-                    });
+                    return Promise.reject(error);
                 }
                 return Promise.reject(error.response.data);
             }
